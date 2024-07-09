@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine.js Widget</title>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Alpine.js Widget</h2>
+
+    <div x-data="{ title: 'Hey, Michelle' }">
+        <p x-text="title"></p>
+        <button x-on:click="title = 'Widgets be throwing hands'">Click In</button>
+        <button x-on:click="title = 'Coolies'">Click Out</button>
+    </div>
+
+    <br>
+
+    <div x-data="{ message: 'Widgets for Bridget' }">
+        <p x-text="message"></p>
+        <input type="text" x-model="message">
+    </div>
+
+    <br>
+
+    <div x-data="{ content: 'First Widget For Bridget'}">
+        <div x-html="content"></div>
+    </div>
+
+    <br>
+
+    <div x-data>
+        <div x-ref="sentence">I Love Widgets</div>
+        <button @click="$refs.sentence.innerText = 'What just happened?'">Change Sentence</button>
+    </div>
+
+    <br>
+
+    <div x-data="{ counter: 0 }">
+        <div class="counter-display" x-text="counter"></div>
+        <button @click="counter++">Increment</button>
+        <button @click="counter > 0 ? counter-- : 0">Decrement</button>
+    </div>
+
+    <br>
+
+    <div x-data="{ count: 0 }">
+        <button @click="count++">+</button>
+        <span class="counter-display" x-text="count"></span>
+        <button @click="count > 0 ? count-- : 0">-</button>
+    </div>
+
+    <br>
+
+    <!-- Grocery List -->
+    <div x-data="{ groceries: ['Meat', 'Eggs', 'Coca Cola', 'Snacks', 'Fruits', 'Vegetables'] }">
+        <p>Groceries:</p>
+        <ul class="list-none">
+            <template x-for="item in groceries" :key="item">
+                <li x-text="item"></li>
+            </template>
+        </ul>
+    </div>
+</body>
+</html>

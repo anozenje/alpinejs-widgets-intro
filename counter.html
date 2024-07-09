@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Counter Widget with Alpine.js</h1>
+    <div x-data="{ counter: 0 }">
+        <div class="counter-display" x-text="counter"></div>
+        <button @click="counter++">Increment</button>
+        <button @click="counter > 0 ? counter-- : 0">Decrement</button>
+    </div>
+
+    <!-- Alpine.js and Custom JS Files -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.1/dist/cdn.min.js"></script>
+</body>
+</html> 
+    

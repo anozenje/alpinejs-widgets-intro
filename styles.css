@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(17, 19, 20);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(251, 255, 240);
+    margin: 0;
+    padding: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    background-color: rgb(42, 126, 165);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: rgb(210, 30, 195);
+}
+
+.counter-display {
+    font-size: 2em;
+    margin: 10px 0;
+}
